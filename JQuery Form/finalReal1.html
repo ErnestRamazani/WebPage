@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--
+ Filename: finalReal2.html
+ Written by: Ernest Ramazani
+ Purpose: Webpage for the user input Validation (finalReal1.js) for my Final project, FINAL RELEASE
+ Date: 11 December 2022
+ Modification History:
+ Original Build
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Client Validation</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+  <link rel="stylesheet" href="finalReal1.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script src="../../validation/dist/jquery.validate.js"></script>	
+<script src="js/signup-form.js"></script>
+</head>
+<body>
+  <form id="mainForm" method="get">
+    <header>
+        <h1 id ="title">N341 UNIVERSITY</h1>
+        <a id="ref" href="../index.html">Final project page</a>
+    </header>
+    
+    <div id="choiceProfStudentAccordion">
+  
+        <h3 style="color:black; font-weight: bold;">Student</h3>
+        <div>
+
+            <form id="studentLoginForm" method="get">
+                
+                <div>
+                    <h2 id="universityAccount">University Account</h2><br>
+  
+                    <fieldset id="studentLoginFieldset">
+                        <legend style="font-style:italic; font-weight :bold">Login</legend>
+                        <input id="studentUsernameInput" placeholder="username" type="name" name="studentUsernameLogin" >
+                        <input id="studentPasswordInput" placeholder="password" type="password" name="studentPasswordLogin"><br>
+                        <br>
+                        <button id="studentLoginEnter" type="button">Enter</button>
+                        <button id="studentLogInReset" type=reset>Reset</button>
+                    </fieldset>
+                </div>
+            </form>
+
+      
+            <form id="studentSignUpForm" mehtod="get">
+             
+                    <h2 id="signUpQuestion">Don't Have an Account? Sign Up</h2>
+                    <div id="studentSignUpAccordion" class="widget">
+                        <h2>Sign Up</h2>
+                        <fieldset id="signUpFieldset">
+                            <label>First Name</label><br>
+                            <input id="studentFirstName" name ="firstN" type="text"  ><br>
+                            <label>Last Name</label><br>
+                            <input id="studentLastName" name ="lastN" type="text"  ><br>
+                            <label>Middle Name</label><br>
+                            <input id="studentMiddleName" name ="middleN" type="text"  ><br>
+                            <label>Email</label><br>`                                                                                                                                                                                                                                                                                                                                                                                                                        
+                            <input id="studentMail"  name ="email" type="email"  ><br>
+                            <fieldset id="studentSexFieldset" >
+                                <legend style="font-weight: bold; font-style:italic"  >Sex</legend>
+                                <label for="maleSex">Male</label>
+                                <input type="radio" name="studentSex" id="maleRadio" value="Male">
+                                <label for="femaleSex">Female</label>
+                                <input type="radio" name="studentSex" id="femaleRadio" value="Female">
+                                <label for="Other">Other</label>
+                                <input type="radio" name="studentSex" id="otherRadio" value="Other">
+                            </fieldset>
+                            <div>
+                                <label for="studentSex" class="error"></label>
+                            </div>
+                            <label>Age</label><br>
+                            <input id="studentAge"  type="text" name="age" ><br>
+                            <label>Telephone</label><br>
+                            <input id="studentTelephone" name ="telephone" type="tel"  ><br>
+                            <label>Major</label><br>
+                            <select name = "studentMajor" id="studentMajor" >
+                            <option>Computer Science</option>
+                            <option>Mathematics</option>
+                            <option>Physics</option>
+                            <option>Engineering</option>
+                            <option>Economics</option>
+                            <option>Business</option>
+                            <option>Chemestry</option>
+                            <option>Biology</option>
+                            <option>Criminology</option>
+                            <option>Art</option>
+                            </select><br>
+                            <fieldset id="studentClasses" >
+                                <legend style="font-weight: bold; font-style:italic" >Class</legend>
+                                <label for="math">Math</label>
+                                <input type="checkbox" name="studentClass" id="mathCheck" value="Math">
+                                <label for="Chemestry">Chemestry</label>
+                                <input type="checkbox" name="studentClass" id="chemestryCheck" value="Chemestry">
+                                <label for="Computing I">Computing I</label>
+                                <input type="checkbox" name="studentClass" id="ComputingICheck" value="Computing I">
+                                <label for="Computing II">Computing II</label>
+                                <input type="checkbox" name="studentClass" id="ComputingIICheck" value="Computing II">
+                                <label for="Data Structure">Data Structure</label>
+                                <input type="checkbox" name="studentClass" id="DataStructureCheck" value="Data Structure">
+                    
+                                <label for="Operating System">Operating System</label>
+                                <input type="checkbox" name="studentClass" id="OperatingSystemCheck" value="Operating System">
+                    
+                                <label for="Physics">Physics</label>
+                                <input type="checkbox" name="studentClass" id="PhysicsCheck" value="Physics">
+                    
+                                <label for="MicroEconomics">MicroEconomics</label>
+                                <input type="checkbox" name="studentClass" id="MicroEconomicsCheck" value="Micro Economics">
+                    
+                                <label for="MacroEconomics">MacroEconomics</label>
+                                <input type="checkbox" name="studentClass" id="MacroEconomicsCheck" value="Macro Economics">
+                    
+                    
+                            </fieldset>
+                            <div>
+                                <label for="studentClass" class="error"></label>
+                            </div>
+                            <label>USERNAME</label><br>
+                            <input id="studentUsername" name="userName" type="text" ><br>
+                            <label>PASSWORD</label><br>
+                            <input id="studentPassword" name="password" type="password" ><br><br>
+                            <input class="submit" type="submit" value="Submit"/>
+                            <input id="studentSignUpReset" type=reset value="Reset"/>
+                        </fieldset>
+                    
+                 
+                </div>
+            </form>
+        </div>
+
+        <h3>Output</h3>
+            <p id="outputSignUpStudent">
+
+            </p>
+    </div>
+</form>
+  <script src="finalReal1.js"></script>
+</body>
+</html>

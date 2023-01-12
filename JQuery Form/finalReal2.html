@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--
+ Filename: finalReal2.html
+ Written by: Ernest Ramazani
+ Purpose: Webpage for the user input Validation (finalReal2.js) for my Final project, FINAL RELEASE
+ Date: 03 December 2022
+ Modification History:
+ Original Build
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Client Validation</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+  <link rel="stylesheet" href="finalReal2.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script src="../../validation/dist/jquery.validate.js"></script>	
+<script src="js/signup-form.js"></script>
+
+</head>
+<body>
+  <form id="mainForm" method="get">
+    <header>
+        <h1 id ="title">N341 UNIVERSITY</h1>
+        <a id="ref" href="../index.html">Final project page</a>
+    </header>
+    
+    <div id="choiceSignUpOutputAccordion">
+      
+      
+
+        <h3 style="color:black; font-weight: bold;" >Professor</h3>
+        <div>
+            <form id="profLoginForm" method="get">
+                <div>
+                    <h2 id="professorSpace">Professor Space</h2>
+
+                    <fieldset id="profLoginFieldset">
+                        <legend  style="font-style:italic; font-weight :bold">Login</legend>
+                        <input id="profUsernameInput" placeholder="username" type="name" >
+                        <input id="profPasswordInput" placeholder="password" type="password"><br>
+                        <br>
+                        <button id="profLoginEnter" type="button">Enter</button>
+                        <button id="profLogInReset" type=reset>Reset</button>
+                    </fieldset>
+                </div>
+            </form>
+                
+        
+            <form id="createSpaceForm" method="get">
+                
+            
+                    <h2 id="createSpaceQuestion">Create Space</h2>
+                    <div id="createSpaceAccordion">
+                    <fieldset id="createSpaceFieldset">
+                        <legend>Create Space</legend>
+                            <label>Space Name</label><br>
+                            <input id="spaceName" type="text" name="spaceName"><br>
+                            <label>First Name</label><br>
+                            <input id="profFirstName" type="text" name="firstN"><br>
+                            <label>Last Name</label><br>
+                            <input id="profLastName" type="text" name="lastN"><br>
+                            <label>Email</label><br>
+                            <input id="profMail" type="email" name="email"><br>
+                            <fieldset id="profSexFieldset" >
+                                <legend style="font-weight: bold; font-style:italic"  >Sex</legend>
+                                <label for="maleSex">Male</label>
+                                <input type="radio" name="profSex" id="maleRadio" value="Male">
+                                <label for="femaleSex">Female</label>
+                                <input type="radio" name="profSex" id="femaleRadio" value="Female">
+                                <label for="Other">Other</label>
+                                <input type="radio" name="profSex" id="otherRadio" value="Other">
+                            </fieldset>
+                            <div>
+                                <label for="profSex" class="error"></label>
+                            </div>
+                            <label>Telephone</label><br>
+                            <input id="profTelephone" typ="tel" name="telephone" ><br>
+                            <label>Major</label><br>
+                            <select name = "projMajor" id="profMajor" name="major">
+                            <option>Computer Science</option>
+                            <option>Mathematics</option>
+                            <option>Physics</option>
+                            <option>Engineering</option>
+                            <option>Economics</option>
+                            <option>Business</option>
+                            <option>Chemestry</option>
+                            <option>Biology</option>
+                            <option>Criminology</option>
+                            <option>Art</option>
+                            </select><br>
+                            <label>Class</label><br>
+                            <input id="profClass" name="class"><br>
+                            <label for="numberOfStudent">Number of Student</label><br>
+                            <input type="text" id="numberOfStudent" readonly style="color:#000000; font-weight:bold;" name="numberStudent"><br><br>
+                            <div id="numberOfStudentSlider"></div>
+                            <label>Begining Date</label><br>
+                            <input id ="beginingDate" type="text" name="beginDate"><br>
+                            <label>End Date</label><br>
+                            <input id ="endDate" type="text" name="endDate" ><br>
+                            <label>USERNAME</label><br>
+                            <input id="profUsername" type="text" name="userName" ><br>
+                            <label>PASSWORD</label><br>
+                            <input id="profPassword" type="password" name="password" ><br><br>
+                            <input class="submit" type="submit" value="Submit"/>
+                            <input id="createSpaceReset" type=reset value="Reset"/>
+                    </fieldset>
+                </div>
+            </form>
+          </div>
+        <h3>Output</h3>
+            <p id="outputSignUpStudent">
+
+            </p>
+    </div>
+</form>
+  <script src="finalReal2.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+/*****************************************************
+ Author: Ernest Ramazani 
+ Date: 9 December, 2022
+ IUPUI // NEWM N220 Fall 2022
+ Filename: index.html
+ Purpose: Web page for the Concentration game
+ ****************************************************/
+-->
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Final Project</title>
+</head>
+<body>
+  <body>
+  	
+    <table border=0 width=70% align=center cellspacing="2" cellpadding="2" >
+
+      <tr>
+      	<td colspan=2>
+      		<div id="DivDebug" style="display:none;" >
+      	   <table width=100% align=center cellspacing="0" cellpadding="0" border=0 >
+             <tr>
+             	 <td> Nbr Won :       </td><td  align=left id="Nbrwon" width=5% >&nbsp;&nbsp;</td>
+               <td> Random: </td><td  align=left id="MSG">&nbsp;&nbsp;</td>
+             </tr>
+             <tr>
+               <td> Tries : </td><td align=left id="Try">&nbsp;&nbsp;</td>
+               <td> Pairs : </td><td align=left id="paires">&nbsp;&nbsp;</td>
+             </tr>
+           </table>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        	<label for="tempo"> Difficulty </label>
+        	<select id="tempo" onchange="timerSec = this[this.selectedIndex].value;">
+        		<option value=1500>Dog Level</option>
+        		<option value=1000 selected>Human Level</option>
+        		<option value=300>Angel Level</option>
+        		<option value=25>God Level</option>
+        	</select>
+        </td>
+        <td>
+           <input id="replay" type="button" value="Replay" onclick="initCard();" disabled>
+        </td>        
+        </tr>
+    </table>
+    <br>
+   <table border=0  align=center cellspacing="1" cellpadding="1" >
+
+     <tbody id=cardTab>
+      <tr>
+       <td id="0" onclick="turnCard(this)" class=Back>&nbsp;</td>
+       <td id="1" onclick="turnCard(this)" class=Back>&nbsp;</td>
+       <td id="2" onclick="turnCard(this)" class=Back>&nbsp;</td>
+       <td id="3" onclick="turnCard(this)" class=Back>&nbsp;</td>
+      </tr>
+      <tr>
+       <td id="4" onclick="turnCard(this)" class=Back>&nbsp;</td>
+       <td id="5" onclick="turnCard(this)" class=Back>&nbsp;</td>
+       <td id="6" onclick="turnCard(this)" class=Back>&nbsp;</td>
+       <td id="7" onclick="turnCard(this)" class=Back>&nbsp;</td>
+      </tr>
+     </tbody>
+
+   </table>
+   <h1 id="result"></h1>
+   <script src="app.js"></script>
+  </body>
+</body>
+</html>

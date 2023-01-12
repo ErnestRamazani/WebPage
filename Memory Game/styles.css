@@ -1,0 +1,20 @@
+/*****************************************************
+ Author: Ernest Ramazani 
+ Date: 9 December, 2022
+ IUPUI // NEWM N220 Fall 2022
+ Filename: styles.css
+ Purpose: Provinding styles for the Concentration game page
+ ****************************************************/
+.cards, .Back, .Front, .lost{
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 0px solid gray;
+  cursor: pointer;
+  width: 150px;
+  height: 200px;
+}
+
+.Back {
+  z-index : 10;
+  background-image: url(Back.jpg);
+}
